@@ -22,7 +22,10 @@ cloud-cost-anomaly-detector/
 ├── src/
 │   └── detect.py
 ├── Dockerfile
-└── README.md ```
+└── README.md
+```markdown
+
+ ---
 
 VERSION II - Améliorée
 
