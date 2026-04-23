@@ -22,11 +22,11 @@ cloud-cost-anomaly-detector/
 ├── src/
 │   └── detect.py
 ├── Dockerfile
-└── README.md
+└── README.md ```
 
 VERSION II - Améliorée
 
-# Cloud Cost Monitoring & Alerting
+## Cloud Cost Monitoring & Alerting
 
 Objectif
 Ce projet permet de surveiller les coûts d'un environnement cloud et de détecter automatiquement des anomalies.  
