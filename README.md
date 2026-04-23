@@ -1,3 +1,11 @@
+## 🧱 Version 1 – Analyse des coûts
+
+Cette première version du projet permet :
+- d’analyser les données de coûts cloud
+- de calculer des indicateurs (total, moyenne, maximum)
+- de générer un rapport
+
+---
 # cloud-cost-anomaly-detector
 
 ## 🚀 Contexte
@@ -23,43 +31,56 @@ cloud-cost-anomaly-detector/
 │   └── detect.py
 ├── Dockerfile
 └── README.md
-```markdown
-
+```
  ---
 
-VERSION II - Améliorée
+## 🚀 Version 2 – Détection et alertes
+
+Une seconde version a été développée pour améliorer le projet :
+
+- détection automatique des anomalies (coût > 2× la moyenne)
+- envoi d’alertes par email via SMTP (Mailtrap)
+- sécurisation des identifiants avec variables d’environnement (.env)
 
 ## Cloud Cost Monitoring & Alerting
 
-Objectif
+## 🎯 Objectif
 Ce projet permet de surveiller les coûts d'un environnement cloud et de détecter automatiquement des anomalies.  
 En cas de dépassement anormal, une alerte est envoyée par email.
 
-## Fonctionnalités
+## ⚙️ Fonctionnalités
 
-- Lecture des données de coûts depuis un fichier CSV
-- Calcul :
-  - coût total
-  - moyenne
-  - coût maximum
-- Détection d’anomalies (coût > 2x la moyenne)
-- Envoi d’alertes par email via SMTP (Mailtrap)
+- 📥 Lecture des données depuis un fichier CSV
+- 📊 Calcul des indicateurs :
+  - Coût total
+  - Moyenne des coûts
+  - Coût maximum
+- 🚨 Détection d’anomalies (coût > 2× la moyenne)
+- 📧 Envoi automatique d’un email d’alerte via SMTP (Mailtrap)
+- 🧾 Affichage d’un rapport dans le terminal
 
-## Technologies utilisées
+## 🛠️ Technologies utilisées
 
-- Python
+- Python 3
 - SMTP (Mailtrap)
-- CSV
-- Variables d’environnement (.env)
+- CSV (gestion de données)
+- Variables d’environnement (`.env`)
+- Git & GitHub (versioning)
 
-## Sécurité
+## 🔐 Sécurité
 
-Les identifiants sensibles (SMTP) ne sont pas stockés dans le code.  
-Ils sont externalisés via un fichier `.env`, ignoré par Git grâce au `.gitignore`.
+Les bonnes pratiques de sécurité ont été appliquées :
 
-## Structure du projet
+- Les identifiants SMTP ne sont **pas stockés dans le code**
+- Utilisation de variables d’environnement via un fichier `.env`
+- Le fichier `.env` est exclu du versioning grâce au `.gitignore`
+- Connexion SMTP sécurisée avec `STARTTLS`
+
+👉 Cela permet d’éviter toute fuite de données sensibles.
+
+## 📂 Structure du projet
+```text
 cloud-project/
-│
 ├── src/
 │ └── detect.py
 ├── data/
@@ -67,67 +88,4 @@ cloud-project/
 ├── .env (non versionné)
 ├── .gitignore
 └── README.md
-
----
-
-## 🚀 Installation
-
-1. Cloner le projet :
-```bash
-git clone https://github.com/MeldaALN/cloud-cost-anomaly-detector.git
-cd cloud-cost-anomaly-detector
-2. Installer les dépendances :
-pip install python-dotenv
-
-⚙️ Configuration
-Créer un fichier .env à la racine du projet :
-
-SMTP_LOGIN=your_mailtrap_login
-SMTP_PASSWORD=your_mailtrap_password
-▶️ Utilisation
-
-Lancer le script :
-
-python src/detect.py
-📧 Exemple d’alerte
-
-Si une anomalie est détectée, un email est envoyé :
-
-🚨 Cloud Cost Alert
-
-Des coûts anormaux ont été détectés :
-
-- 2024-01-10 | EC2 | 250€
-- 2024-01-12 | S3 | 180€
-
----
-
-## 🚀 Installation
-
-1. Cloner le projet :
-```bash
-git clone https://github.com/MeldaALN/cloud-cost-anomaly-detector.git
-cd cloud-cost-anomaly-detector
-2. Installer les dépendances :
-pip install python-dotenv
-
-⚙️ Configuration
-Créer un fichier .env à la racine du projet :
-
-SMTP_LOGIN=your_mailtrap_login
-SMTP_PASSWORD=your_mailtrap_password
-▶️ Utilisation
-
-Lancer le script :
-
-python src/detect.py
-📧 Exemple d’alerte
-
-Si une anomalie est détectée, un email est envoyé :
-
-🚨 Cloud Cost Alert
-
-Des coûts anormaux ont été détectés :
-
-- 2024-01-10 | EC2 | 250€
-- 2024-01-12 | S3 | 180€
+```
