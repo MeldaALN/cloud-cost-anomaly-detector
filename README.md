@@ -67,21 +67,32 @@ cloud-project/
 
 ---
 
-## 🚀 Lancement du projet
+## 🚀 Installation
 
 1. Cloner le projet :
 ```bash
-git clone <url-du-repo>
-Installer les dépendances :
+git clone https://github.com/MeldaALN/cloud-cost-anomaly-detector.git
+cd cloud-cost-anomaly-detector
+2. Installer les dépendances :
 pip install python-dotenv
-Créer un fichier .env :
-SMTP_LOGIN=your_login
-SMTP_PASSWORD=your_password
+
+⚙️ Configuration
+Créer un fichier .env à la racine du projet :
+
+SMTP_LOGIN=your_mailtrap_login
+SMTP_PASSWORD=your_mailtrap_password
+▶️ Utilisation
+
 Lancer le script :
+
 python src/detect.py
 📧 Exemple d’alerte
 
-Une alerte est envoyée si une anomalie est détectée :
+Si une anomalie est détectée, un email est envoyé :
 
 🚨 Cloud Cost Alert
+
+Des coûts anormaux ont été détectés :
+
 - 2024-01-10 | EC2 | 250€
+- 2024-01-12 | S3 | 180€
