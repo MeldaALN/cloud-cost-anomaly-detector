@@ -24,7 +24,7 @@ cloud-cost-anomaly-detector/
 ├── Dockerfile
 └── README.md
 
-2 ème phase
+VERSION II - Améliorée
 
 # Cloud Cost Monitoring & Alerting
 
@@ -64,6 +64,38 @@ cloud-project/
 ├── .env (non versionné)
 ├── .gitignore
 └── README.md
+
+---
+
+## 🚀 Installation
+
+1. Cloner le projet :
+```bash
+git clone https://github.com/MeldaALN/cloud-cost-anomaly-detector.git
+cd cloud-cost-anomaly-detector
+2. Installer les dépendances :
+pip install python-dotenv
+
+⚙️ Configuration
+Créer un fichier .env à la racine du projet :
+
+SMTP_LOGIN=your_mailtrap_login
+SMTP_PASSWORD=your_mailtrap_password
+▶️ Utilisation
+
+Lancer le script :
+
+python src/detect.py
+📧 Exemple d’alerte
+
+Si une anomalie est détectée, un email est envoyé :
+
+🚨 Cloud Cost Alert
+
+Des coûts anormaux ont été détectés :
+
+- 2024-01-10 | EC2 | 250€
+- 2024-01-12 | S3 | 180€
 
 ---
 
