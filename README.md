@@ -1,4 +1,4 @@
-## 🧱 Version 1 – Analyse des coûts
+## Version 1 – Analyse des coûts
 
 Cette première version du projet permet :
 - d’analyser les données de coûts cloud
@@ -34,7 +34,7 @@ cloud-cost-anomaly-detector/
 ```
  ---
 
-## 🚀 Version 2 – Détection et alertes
+## Version 2 – Détection et alertes
 
 Une seconde version a été développée pour améliorer le projet :
 
