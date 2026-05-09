@@ -82,9 +82,9 @@ Les bonnes pratiques de sécurité ont été appliquées :
 ```text
 cloud-project/
 ├── src/
-│ └── detect.py
+│   └── detect.py
 ├── data/
-│ └── costs.csv
+│   └── costs.csv
 ├── .env (non versionné)
 ├── .gitignore
 └── README.md
