@@ -45,36 +45,36 @@ Une seconde version a été développée pour améliorer le projet :
 ## Cloud Cost Monitoring & Alerting
 
 ## 🎯 Objectif
-Ce projet permet de surveiller les coûts d'un environnement cloud et de détecter automatiquement des anomalies.  
+Ce projet permet de surveiller les coûts d’un environnement cloud et de détecter automatiquement des anomalies.  
 En cas de dépassement anormal, une alerte est envoyée par email.
 
 ## ⚙️ Fonctionnalités
 
-- 📥 Lecture des données depuis un fichier CSV
+- 📥 Lecture des données depuis un fichier CSV  
 - 📊 Calcul des indicateurs :
   - Coût total
   - Moyenne des coûts
-  - Coût maximum
-- 🚨 Détection d’anomalies (coût > 2× la moyenne)
-- 📧 Envoi automatique d’un email d’alerte via SMTP (Mailtrap)
-- 🧾 Affichage d’un rapport dans le terminal
+  - Coût maximum  
+- 🚨 Détection d’anomalies (coût > 2× la moyenne)  
+- 📧 Envoi automatique d’un email d’alerte via SMTP (Mailtrap)  
+- 🧾 Affichage d’un rapport dans le terminal  
 
 ## 🛠️ Technologies utilisées
 
-- Python 3
-- SMTP (Mailtrap)
-- CSV (gestion de données)
-- Variables d’environnement (`.env`)
-- Git & GitHub (versioning)
+- Python 3  
+- SMTP (Mailtrap)  
+- CSV (gestion de données)  
+- Variables d’environnement (.env)  
+- Git & GitHub  
 
 ## 🔐 Sécurité
 
 Les bonnes pratiques de sécurité ont été appliquées :
 
-- Les identifiants SMTP ne sont **pas stockés dans le code**
-- Utilisation de variables d’environnement via un fichier `.env`
-- Le fichier `.env` est exclu du versioning grâce au `.gitignore`
-- Connexion SMTP sécurisée avec `STARTTLS`
+- Les identifiants SMTP ne sont pas stockés dans le code  
+- Utilisation de variables d’environnement via un fichier `.env`  
+- Le fichier `.env` est exclu du versioning grâce au `.gitignore`  
+- Connexion SMTP sécurisée avec STARTTLS  
 
 👉 Cela permet d’éviter toute fuite de données sensibles.
 
