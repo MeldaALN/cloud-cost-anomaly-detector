@@ -87,5 +87,7 @@ cloud-project/
 │   └── costs.csv
 ├── .env (non versionné)
 ├── .gitignore
+├── requirements.txt
+├── Dockerfile
 └── README.md
 ```
