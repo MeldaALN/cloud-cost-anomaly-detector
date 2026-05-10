@@ -4,7 +4,9 @@ import smtplib
 from email.mime.text import MIMEText
 from dotenv import load_dotenv
 
-load_dotenv()
+from pathlib import Path
+
+load_dotenv(dotenv_path=Path(__file__).resolve().parent.parent / ".env")
 
 costs = []
 anomalies = []
@@ -45,8 +47,10 @@ Des coûts anormaux ont été détectés :
         server.sendmail(sender, [receiver], message.as_string())
         server.quit()
         print("📧 Email envoyé avec succès via Mailtrap !")
+
     except Exception as e:
         print("❌ Erreur lors de l'envoi de l'email :", repr(e))
+
 
 # Lire les données
 with open("data/costs.csv", "r", encoding="utf-8") as file:
